@@ -4,13 +4,10 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-import ErrorPage from './components/pages/ErrorPage';
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-   <App></App>
-  
+    <App />
   </React.StrictMode>
 );
 
