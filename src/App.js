@@ -18,9 +18,9 @@ function App() {
   return (
     <div className="App">
      <Container>      
-     <Home />
+     
       <Navbar></Navbar> 
-    
+    <br/><br/>
 
 <Router>
        <Routes>
