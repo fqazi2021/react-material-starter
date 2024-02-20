@@ -3,6 +3,8 @@ import './App.css';
 // import Typingmaterial from './components/typing-material/Typingmaterial';
 import Navbar from './components/Navbar/Navbar';
 import { Container } from '@mui/material';
+import { createTheme, ThemeProvider, styled } from '@mui/material/styles';
+import { purple } from '@mui/material/colors';
 import {
   BrowserRouter as Router,  
   Route,  
@@ -12,11 +14,33 @@ import {
 import Home from './components/pages/home';
 import OurServices from './components/pages/OurServices';
 import ContactUs from './components/pages/ContactUs';
-import Notfound from './components/pages/Notfound';
+// import Notfound from './components/pages/Notfound';
 // import BoxMaterial from './components/box-material/Boxmaterial';
+
+
+
+
+const theme = createTheme({
+  color: {
+    primary: {
+      main: purple[500],
+    },
+    secondary: {
+      main: '#f44336',
+    },
+  },
+});
+
+
+
 function App() {
   return (
     <div className="App">
+<ThemeProvider theme={theme}>
+  <Navbar></Navbar>
+</ThemeProvider>
+
+
      <Container>      
      
       <Navbar></Navbar> 

@@ -8,7 +8,7 @@ import { AppBar, Toolbar, Typography,Link,Button } from '@mui/material';
 function Navbar(props){
 
 return (
-    <AppBar color="primary">
+    <AppBar color={props.color}>
            
     <Toolbar >
         <Typography style={{flexGrow:1}} >MY Portfolio</Typography>
