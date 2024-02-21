@@ -1,21 +1,23 @@
 import React from 'react';
 
-import { AppBar, Toolbar, Typography,Link,Button } from '@mui/material';
-// import Home from '../pages/home';
-// import ContactUs from '../pages/ContactUs';
-// import Services from '../pages/Services';
+import { AppBar, Toolbar, Typography,Button } from '@mui/material';
+
+function Navigate(url){
+    window.location= url;
+    console.log("url:"+url);
+}
 
 function Navbar(props){
-
+    //const navigate = useNavigate();
 return (
     <AppBar color={props.color}>
            
     <Toolbar >
         <Typography style={{flexGrow:1}} >MY Portfolio</Typography>
        
-        <Button variant="contained" path="/" to="/home" component={Link}>Home</Button>
-        <Button variant='contained' href="/services">Services</Button>
-        <Button variant='contained' href="/contactus">Contact Us</Button>
+        <Button variant='contained' onClick={()=>{Navigate("/home")}}>Home</Button>
+        <Button  variant='contained' onClick={()=>{Navigate("/services")}}>Services</Button>
+        <Button  variant='contained' onClick={()=>{Navigate("/contactus")}}>Contact Us</Button>
        
     </Toolbar>
     </AppBar>

@@ -4,13 +4,13 @@ import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import { Container } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { purple } from '@mui/material/colors';
+import { indigo } from '@mui/material/colors';
 import {
   BrowserRouter as Router,  
   Route,  
   Routes
 } from "react-router-dom";
-import {indigo} from '@mui/material/colors';
+
 import Home from './components/pages/home';
 import OurServices from './components/pages/OurServices';
 import ContactUs from './components/pages/ContactUs';
