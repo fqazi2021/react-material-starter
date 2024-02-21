@@ -3,32 +3,26 @@ import './App.css';
 // import Typingmaterial from './components/typing-material/Typingmaterial';
 import Navbar from './components/Navbar/Navbar';
 import { Container } from '@mui/material';
-import { createTheme, ThemeProvider, styled } from '@mui/material/styles';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { purple } from '@mui/material/colors';
 import {
   BrowserRouter as Router,  
   Route,  
   Routes
 } from "react-router-dom";
-
+import {indigo} from '@mui/material/colors';
 import Home from './components/pages/home';
 import OurServices from './components/pages/OurServices';
 import ContactUs from './components/pages/ContactUs';
 // import Notfound from './components/pages/Notfound';
 // import BoxMaterial from './components/box-material/Boxmaterial';
-
-
-
-
 const theme = createTheme({
-  color: {
-    primary: {
-      main: purple[500],
-    },
-    secondary: {
-      main: '#f44336',
-    },
-  },
+ palette:{
+ primary:{
+  main:indigo[500]
+ }
+}
+  
 });
 
 
@@ -37,28 +31,28 @@ function App() {
   return (
     <div className="App">
 <ThemeProvider theme={theme}>
-  <Navbar></Navbar>
-</ThemeProvider>
-
-
-     <Container>      
-     
-      <Navbar></Navbar> 
-    <br/><br/>
+<Container> 
+     <Navbar color="primary"></Navbar> 
+  
 
 <Router>
-       <Routes>
-          <Route exact path="/" element={<Home/>} />            
-          
-          <Route path="/services" element={<OurServices/>}/>            
-          
-          <Route path="/contactus" element={<ContactUs/>}/>          
+      <Routes>
+         <Route exact path="/" element={<Home/>} />            
          
+         <Route path="/services" element={<OurServices/>}/>            
          
-        </Routes>  
-        </Router>   
-      
-     </Container>
+         <Route path="/contactus" element={<ContactUs/>}/>          
+        
+        
+       </Routes>  
+       </Router>   
+     
+    </Container>
+    </ThemeProvider>
+
+
+
+    
      
   
     </div>

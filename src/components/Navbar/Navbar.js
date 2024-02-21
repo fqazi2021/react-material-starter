@@ -13,7 +13,7 @@ return (
     <Toolbar >
         <Typography style={{flexGrow:1}} >MY Portfolio</Typography>
        
-        <Button variant="contained" href="/">Home</Button>
+        <Button variant="contained" path="/" to="/home" component={Link}>Home</Button>
         <Button variant='contained' href="/services">Services</Button>
         <Button variant='contained' href="/contactus">Contact Us</Button>
        
