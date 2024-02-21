@@ -3,8 +3,8 @@ import './App.css';
 // import Typingmaterial from './components/typing-material/Typingmaterial';
 import Navbar from './components/Navbar/Navbar';
 import { Container } from '@mui/material';
-import { createTheme, ThemeProvider, styled } from '@mui/material/styles';
-import { purple } from '@mui/material/colors';
+import { createTheme, ThemeProvider,  } from '@mui/material/styles';
+import { indigo } from '@mui/material/colors';
 import {
   BrowserRouter as Router,  
   Route,  
@@ -21,14 +21,12 @@ import ContactUs from './components/pages/ContactUs';
 
 
 const theme = createTheme({
-  color: {
-    primary: {
-      main: purple[500],
-    },
-    secondary: {
-      main: '#f44336',
-    },
-  },
+  palette:{
+    primary:{
+      main:indigo[500],
+    }
+  }
+  
 });
 
 
@@ -37,10 +35,7 @@ function App() {
   return (
     <div className="App">
 <ThemeProvider theme={theme}>
-  <Navbar></Navbar>
-</ThemeProvider>
-
-
+  
      <Container>      
      
       <Navbar></Navbar> 
@@ -59,7 +54,7 @@ function App() {
         </Router>   
       
      </Container>
-     
+ </ThemeProvider>    
   
     </div>
   );
