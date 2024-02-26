@@ -7,20 +7,43 @@ import { useState } from 'react';
 
 
 function Navbar(props){
+    const menuitems =["Home","Profile","Services","Contact Us"]
 const [anchorEl, setAnchorEl] = useState(false);
-const open = Boolean(anchorEl);
+const open = anchorEl;
 const handleClick = (e) => {
     console.log(open);
-    if(open==false)
+    if(open==false){
     setAnchorEl(true);
+    
+    }
+
 else{
     setAnchorEl(false);
+    
 }
-};
+}
 const handleClose = () => {
   setAnchorEl(false);
 };
+function getmenuitems(){
 
+    const buttons = menuitems.map((item)=>{
+        return <Button variant='contained'>{item}</Button>;
+    });
+
+    return buttons;
+}
+
+function getlistmenuitems(){
+
+    const buttons = menuitems.map((item)=>{
+        return (<MenuItem variant='contained'>
+            <ListItemText onClick={handleClose}>{item}</ListItemText>
+            </MenuItem>);
+    });
+
+    return buttons;
+}
     
 return (
     <AppBar color={props.color} position='static'>
@@ -52,25 +75,17 @@ return (
             horizontal: 'left',
           }}
         >
-            <MenuItem>
-            <ListItemText onClick={handleClose}>Profile</ListItemText>
-            </MenuItem>
-            <MenuItem>
-            <ListItemText onClick={handleClose}>Services</ListItemText>
-            </MenuItem>
-            <MenuItem>
-            <ListItemText onClick={handleClose}>Contact Us</ListItemText>
-            </MenuItem>
+           {getlistmenuitems()}
             </Menu>
         
         
         </Box>
         <Typography style={{flexGrow:1}} >MY Portfolio</Typography>
         <Box variant='div' sx={{display:{sm:'none',xs:'none',md:'none',lg:'flex',width:'inherit'}}}>
-              
-        <Button variant='contained'>Profile</Button>
-        <Button variant='contained'>Services</Button>
-        <Button variant='contained'>Contact US</Button>   
+        
+        {getmenuitems()}
+            
+                
         </Box>
 
         
