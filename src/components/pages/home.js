@@ -1,6 +1,6 @@
 import React from 'react';
-import { Box, Paper, Typography } from '@mui/material';
-import { CenterFocusStrongRounded } from '@mui/icons-material';
+import { Box,  Typography } from '@mui/material';
+
 
 function Home(){
     return (
