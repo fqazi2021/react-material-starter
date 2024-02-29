@@ -1,9 +1,10 @@
 import React from 'react';
 import ContactEmergencyIcon from '@mui/icons-material/ContactEmergency';
-import {Check,ListItemIcon} from '@mui/icons-material';
-import { AppBar, Toolbar, Typography,Button, IconButton,Menu,MenuItem,MenuList,Paper, ListItemText,Box } from '@mui/material';
+// import {Check,ListItemIcon} from '@mui/icons-material';
+import { AppBar, Toolbar, Typography, IconButton,Menu,MenuItem, ListItemText,Box } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { useState } from 'react';
+import { Link,BrowserRouter } from "react-router-dom";
 
 
 function Navbar(props){
@@ -12,7 +13,7 @@ const [anchorEl, setAnchorEl] = useState(false);
 const open = anchorEl;
 const handleClick = (e) => {
     console.log(open);
-    if(open==false){
+    if(open===false){
     setAnchorEl(true);
     
     }
@@ -22,13 +23,18 @@ else{
     
 }
 }
+function Navigate(url){
+    window.location= url;
+}
 const handleClose = () => {
   setAnchorEl(false);
 };
 function getmenuitems(){
 
     const buttons = menuitems.map((item)=>{
-        return <Button variant='contained'>{item}</Button>;
+        return (
+        <Link  to={item} ><button color="primary">{item}</button></Link>
+        );
     });
 
     return buttons;
@@ -37,7 +43,7 @@ function getmenuitems(){
 function getlistmenuitems(){
 
     const buttons = menuitems.map((item)=>{
-        return (<MenuItem variant='contained'>
+        return (<MenuItem >
             <ListItemText onClick={handleClose}>{item}</ListItemText>
             </MenuItem>);
     });
