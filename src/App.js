@@ -6,10 +6,12 @@ import { Container } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { indigo } from '@mui/material/colors';
 import Footer from './components/Footer/Footer';
+
 import {
-  BrowserRouter as Router,  
+  BrowserRouter ,  
   Route,  
-  Routes
+  Routes,
+  
 } from "react-router-dom";
 
 import Home from './components/pages/home';
@@ -29,22 +31,26 @@ const theme = createTheme({
 
 
 function App() {
+  
   return (
     <div className="App">
 <ThemeProvider theme={theme}>
 <Container> 
-     <Navbar color="primary"></Navbar> 
-<Router>
+   
+     
+<BrowserRouter>
+<Navbar color="primary"></Navbar> 
       <Routes>
-         <Route exact path="/" element={<Home/>} />            
+         <Route exact path="/Home" element={<Home/>} />            
          
          <Route path="/services" element={<OurServices/>}/>            
          
-         <Route path="/contactus" element={<ContactUs/>}/>          
+         <Route path="/contact us" element={<ContactUs/>}/>          
         
         
        </Routes>  
-       </Router>   
+</BrowserRouter>   
+       
      <Footer></Footer>
     </Container>
     </ThemeProvider>
