@@ -1,10 +1,10 @@
 import React from 'react';
 import ContactEmergencyIcon from '@mui/icons-material/ContactEmergency';
 // import {Check,ListItemIcon} from '@mui/icons-material';
-import { AppBar, Toolbar, Typography, IconButton,Menu,MenuItem, ListItemText,Box } from '@mui/material';
+import { AppBar, Toolbar, Typography, IconButton,Menu,MenuItem, ListItemText,Box,Button } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { useState } from 'react';
-import { Link,BrowserRouter } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 function Navbar(props){
@@ -23,9 +23,9 @@ else{
     
 }
 }
-function Navigate(url){
-    window.location= url;
-}
+// function Navigate(url){
+//     window.location= url;
+// }
 const handleClose = () => {
   setAnchorEl(false);
 };
@@ -33,7 +33,7 @@ function getmenuitems(){
 
     const buttons = menuitems.map((item)=>{
         return (
-        <Link  to={item} ><button color="primary">{item}</button></Link>
+        <Link  to={item} ><Button color="primary" variant='contained'>{item}</Button></Link>
         );
     });
 
@@ -52,7 +52,7 @@ function getlistmenuitems(){
 }
     
 return (
-    <AppBar color={props.color} position='static'>
+    <AppBar color={props.color} position='fixed'>
            
     <Toolbar >
     <IconButton Size='Large' edge='start' color='inherit' aria-label='Logo' sx={{display:{sm:'none',xs:'none',md:'flex',lg:'flex'}}}>

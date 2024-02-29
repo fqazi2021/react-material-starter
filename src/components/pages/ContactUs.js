@@ -1,4 +1,4 @@
-import { TextField,Grid,Paper } from '@mui/material';
+import { TextField,Grid,Paper,Button } from '@mui/material';
 import { useForm } from "react-hook-form";
 
 import React from 'react';
@@ -43,7 +43,7 @@ function ContactUs(){
 <p className="error">{errors.CRNumber && <p>This field is required</p>}</p>
             </Grid>
 <Grid item Lg={1} sm={1}>
-    <button type="submit" color='primary' >Submit</button>
+    <Button type="submit"  color="primary" variant='contained'>Submit</Button>
 </Grid>
           
            

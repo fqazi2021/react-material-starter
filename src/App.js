@@ -5,7 +5,7 @@ import Navbar from './components/Navbar/Navbar';
 import { Container } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { indigo } from '@mui/material/colors';
-import Footer from './components/Footer/Footer';
+import Cfooter from './components/Footer/Cfooter';
 
 import {
   BrowserRouter ,  
@@ -40,6 +40,8 @@ function App() {
      
 <BrowserRouter>
 <Navbar color="primary"></Navbar> 
+
+<br/><br/><br/>
       <Routes>
          <Route exact path="/Home" element={<Home/>} />            
          
@@ -51,7 +53,7 @@ function App() {
        </Routes>  
 </BrowserRouter>   
        
-     <Footer></Footer>
+     <Cfooter></Cfooter>
     </Container>
     </ThemeProvider>
 
