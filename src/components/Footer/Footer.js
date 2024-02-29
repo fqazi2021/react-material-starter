@@ -1,7 +1,7 @@
 import React from 'react';
-import { Grid, IconButton, Typography } from '@mui/material';
+import { Grid,  Typography } from '@mui/material';
 import {InputAdornment,TextField} from '@mui/material';
-import SearchIcon, { Search } from '@mui/icons-material';
+import  { Search } from '@mui/icons-material';
  
 
 function Footer(){
@@ -15,9 +15,13 @@ function Footer(){
             <Typography variant='h4' color='secondary' >Company Name</Typography>
             <hr></hr>
 
-            <Typography variant='span'>
+            <Typography variant='span' >
             Centillion is a recognized development company with an aim to assist businesses with product design, development and support.
 
+       
+
+            </Typography>
+<hr/>
             <TextField
             id="input-with-icon-textfield"
             label="Search Site"
@@ -30,8 +34,6 @@ function Footer(){
             }}
              variant="outlined"
       />
-
-            </Typography>
 
             </Grid>
             <Grid item lg={4} md={4}  borderRadius={1} borderRight={1} bgcolor='#ccc' p={2}>
