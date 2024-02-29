@@ -38,12 +38,12 @@ function ContactUs(){
 <p className="error">{errors.Email && <p>This field is required</p>}</p>
             </Grid> 
 
-            <Grid item Lg={3} md={3} sm={1}>
+            <Grid item Lg={12} md={12} sm={1}>
 <TextField id="txtcrnumber" label="CRNumber" placeholder='CRNumber' size='sm' variant='standard' type="number" {...register("CRNumber",{required:true})}></TextField>
 <p className="error">{errors.CRNumber && <p>This field is required</p>}</p>
             </Grid>
 <Grid item Lg={1} sm={1}>
-    <button type="submit">Submit</button>
+    <button type="submit" color='primary' >Submit</button>
 </Grid>
           
            
